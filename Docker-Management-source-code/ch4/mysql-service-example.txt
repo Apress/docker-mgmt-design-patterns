@@ -1,0 +1,9 @@
+~ $ docker service create \
+   --env MYSQL_ROOT_PASSWORD='mysql'\
+   --replicas 1 \
+   --restart-condition none \
+   --restart-max-attempts 5 \
+   --update-failure-action continue \
+   --name mysql \
+   --update-delay 10s \
+  mysql

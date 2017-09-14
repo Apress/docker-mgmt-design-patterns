@@ -1,0 +1,8 @@
+~ $ docker service create \
+    --env MYSQL_ROOT_PASSWORD='mysql'\
+    --replicas 3 \
+   --constraint  node.id==ptm7e0p346zwypos7wnpcm72d\
+    --name mysql \
+   mysql
+
+

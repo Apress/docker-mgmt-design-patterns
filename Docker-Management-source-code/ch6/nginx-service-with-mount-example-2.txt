@@ -1,0 +1,8 @@
+~ $ docker service create \
+    --name nginx-service-2 \
+    --replicas 3 \
+    --mount type=volume,destination=/var/lib/nginx   \
+    nginx:alpine
+
+
+

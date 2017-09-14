@@ -1,0 +1,12 @@
+~ $ docker service create \
+  --name hello-world \
+  --publish 8080:80 \
+  -- replicas 2 \
+  tutum/hello-world
+
+docker service create \
+--name hello-world \
+--publish 8080:80 \
+--replicas 2 \
+tutum/hello-world
+

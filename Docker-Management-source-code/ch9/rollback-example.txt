@@ -1,0 +1,9 @@
+~ $ docker service update \
+    --replicas 10 \
+    --image mysql:5.9  \
+    --update-delay 10s \
+    --update-failure-action pause \
+   mysql
+
+
+~ $ docker service update --rollback mysql

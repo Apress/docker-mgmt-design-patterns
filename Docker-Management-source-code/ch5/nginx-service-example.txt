@@ -1,0 +1,5 @@
+~ $ docker service create \
+   --replicas 1 \
+    --name nginx \
+    nginx
+

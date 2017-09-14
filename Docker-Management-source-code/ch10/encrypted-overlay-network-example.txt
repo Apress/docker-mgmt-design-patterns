@@ -1,0 +1,4 @@
+~ $ docker network create \
+   --driver overlay \
+  --opt encrypted \
+    overlay-network-2

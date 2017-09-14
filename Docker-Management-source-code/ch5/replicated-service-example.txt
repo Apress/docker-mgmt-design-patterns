@@ -1,0 +1,13 @@
+~ $ docker service create \
+    --env MYSQL_ROOT_PASSWORD='mysql'\
+    --replicas 1 \
+    --name mysql \
+   mysql
+
+
+~ $ docker service create \
+   --mode replicated \
+    --env MYSQL_ROOT_PASSWORD='mysql'\
+    --replicas 1 \
+    --name mysql \
+   mysql

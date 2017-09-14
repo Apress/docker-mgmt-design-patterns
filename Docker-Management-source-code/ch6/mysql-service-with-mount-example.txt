@@ -1,0 +1,11 @@
+~ $ docker service create \
+     --env MYSQL_ROOT_PASSWORD='mysql'\
+     --mount type=volume,src="mysql-scripts",dst="/etc/mysql/scripts",volume-label="msg=mysql",volume-label="msg2=scripts" \
+     --publish 3306:3306\
+    --replicas 2 \
+    --name mysql \
+   mysql
+
+
+
+

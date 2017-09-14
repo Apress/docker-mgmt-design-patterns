@@ -1,0 +1,8 @@
+~ $ docker service create --mode global \
+ --restart-condition any \
+ --name sematext-agent-docker \
+ --mount type=bind,src=/var/run/docker.sock,dst=/var/run/docker.sock \
+ --mount type=bind,src=/,dst=/rootfs,readonly=true \
+ -e SPM_TOKEN=9b5552fd-001d-44f0-9452-76046d4a3413 \
+ -e LOGSENE_TOKEN=81ac5395-fe8f-47d9-93b2-dc00c649116a \
+   sematext/sematext-agent-docker

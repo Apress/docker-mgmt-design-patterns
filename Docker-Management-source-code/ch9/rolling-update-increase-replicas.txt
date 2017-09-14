@@ -1,0 +1,5 @@
+~ $ docker service update \
+   --replicas 5 \
+    --update-delay 20s \
+   --update-parallelism 1  \
+   mysql

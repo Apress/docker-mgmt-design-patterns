@@ -1,0 +1,6 @@
+~ $ docker service create \
+    --env MYSQL_ROOT_PASSWORD='mysql'\
+    --replicas 1 \
+    --name mysql \
+    --reserve-cpu 1 --limit-cpu 2 --reserve-memory  256mb --limit-memory 512mb mysql
+

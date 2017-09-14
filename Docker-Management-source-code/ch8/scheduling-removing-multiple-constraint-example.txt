@@ -1,0 +1,7 @@
+~ $ docker service update \
+    --constraint-rm node.role==worker \
+    --constraint-rm   node.hostname!=ip-172-31-2-177.ec2.internal\
+   mysql
+
+
+

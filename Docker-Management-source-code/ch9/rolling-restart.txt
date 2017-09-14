@@ -1,0 +1,1 @@
+docker service update  --update-parallelism 1 --update-delay 20s mysql

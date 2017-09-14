@@ -1,0 +1,5 @@
+~ $ docker service create \
+    --mode global \
+    --env MYSQL_ROOT_PASSWORD='mysql'\
+    --name mysql-global \
+  mysql

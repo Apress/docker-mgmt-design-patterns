@@ -1,0 +1,1 @@
+docker service update --reserve-cpu 1 --limit-cpu 2 --reserve-memory 256mb --limit-memory 512mb mysql

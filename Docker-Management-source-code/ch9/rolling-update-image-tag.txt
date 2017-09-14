@@ -1,0 +1,1 @@
+docker service update --image mysql:latest --update-parallelism 2  mysql

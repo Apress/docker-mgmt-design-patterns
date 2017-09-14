@@ -1,0 +1,23 @@
+~ $ docker network create \
+     --subnet=10.0.0.0/16 \
+     --gateway=10.0.0.100 \
+     --internal  \
+     --label HelloWorldService \
+     --ip-range=10.0.1.0/24 \
+    --driver overlay \
+    hello-world-network
+
+~ $ docker service create \
+    --name hello-world \
+    --network  hello-world-network \
+    --replicas 3 \
+    tutum/hello-world
+
+~ $ docker service create \
+    --name hello-world \
+    --network  hello-world-network \
+    --publish 8080:80 \
+    --replicas 3 \
+    tutum/hello-world
+
+

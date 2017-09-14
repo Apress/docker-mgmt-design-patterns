@@ -1,0 +1,5 @@
+docker service update --image postgres --update-parallelism 1  mysql
+
+docker service update   --env-rm MYSQL_ROOT_PASSWORD    mysql
+
+docker service update --image mysql --env-add MYSQL_ROOT_PASSWORD='mysql'  mysql

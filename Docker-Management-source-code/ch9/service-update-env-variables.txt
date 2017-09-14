@@ -1,0 +1,1 @@
+docker service update --env-rm MYSQL_DATABASE --env-rm MYSQL_USER  --env-rm MYSQL_PASSWORD  --env-rm MYSQL_ALLOW_EMPTY_PASSWORD mysql

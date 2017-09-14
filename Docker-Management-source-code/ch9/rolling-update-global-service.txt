@@ -1,0 +1,16 @@
+~ $ docker service create \
+    --mode global \
+    --env MYSQL_ROOT_PASSWORD='mysql'\
+    --name mysql \
+   mysql
+
+~ $ docker service update \
+    --image mysql:5.6 \
+    --update-delay 10s \
+   mysql
+
+~ $ docker service update \
+    --image mysql \
+     --replicas 1 \
+  mysql
+

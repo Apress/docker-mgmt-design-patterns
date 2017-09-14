@@ -1,0 +1,1 @@
+docker service update --env-add MYSQL_DATABASE='mysqldb' --env-add MYSQL_USER='mysql'  --env-add MYSQL_PASSWORD='mysql'  --env-add MYSQL_ALLOW_EMPTY_PASSWORD='no' --update-parallelism 1 mysql

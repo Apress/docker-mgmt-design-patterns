@@ -1,0 +1,12 @@
+core@ip-10-0-0-143 ~ $ docker service create \
+     --env MYSQL_ROOT_PASSWORD='mysql' \
+     --replicas 3 \
+    --mount type=bind,src="/etc/mysql/scripts",dst="/scripts" \
+    --name mysql \
+        mysql
+
+
+
+
+
+

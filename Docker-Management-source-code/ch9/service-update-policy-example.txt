@@ -1,0 +1,8 @@
+~ $ docker service create \
+    --env MYSQL_ROOT_PASSWORD='mysql'\
+    --replicas 1 \
+    --name mysql \
+    --update-delay 10s \
+   --update-parallelism 1  \
+   mysql:5.6
+

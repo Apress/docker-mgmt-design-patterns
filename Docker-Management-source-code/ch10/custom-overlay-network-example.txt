@@ -1,0 +1,24 @@
+~ $ docker network create \
+    --subnet=192.168.0.0/16 \
+    --subnet=192.170.0.0/16 \
+    --gateway=192.168.0.100 \
+    --gateway=192.170.0.100 \
+     --ip-range=192.168.1.0/24 \
+    --driver overlay \
+    mysql-network
+
+~ $ docker service create \
+    --env MYSQL_ROOT_PASSWORD='mysql'\
+    --replicas 1 \
+    --network mysql-network \
+    --name mysql-2\
+   mysql
+
+
+
+~ $ docker network create \
+    --subnet=10.0.0.0/16 \
+    --gateway=10.0.0.100 \
+     --ip-range=10.0.1.0/24 \
+    --driver overlay \
+    mysql-network-2

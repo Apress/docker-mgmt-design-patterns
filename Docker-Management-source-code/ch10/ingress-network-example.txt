@@ -1,0 +1,13 @@
+~ $ docker service create \
+    --name hello-world \
+    -p 8080:80\
+    --replicas 3 \
+    tutum/hello-world
+
+
+~ $ docker service create \
+    --name hello-world \
+    -p 80\
+    --replicas 3 \
+    tutum/hello-world
+
